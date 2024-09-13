@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #39261d;
+  --foreground: #171717;
+  --coffe-color: #39261d;
+  --paste-color: #00ffe4;
+  --yellow-color: #ffc147;
+}
+@font-face {
+  font-family: "BalboaW05";
+  src: url("/BalboaW05.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "soggy";
+  src: url("/KCSoggyCenters.otf");
+  font-weight: bold;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+/* font-family: "soggy", sans-serif; */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "BalboaW05", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+.font-soggy {
+  font-family: "soggy", sans-serif !important;
+}
+.color-coffee {
+  color: var(--coffe-color);
+}
+.color-paste {
+  color: var(--paste-color);
+}
+.color-yellow {
+  color: var(--yellow-color);
+}
+
+.bg-coffee {
+  background: var(--coffe-color);
+}
+.bg-paste {
+  background: var(--paste-color);
+}
+.bg-yellow {
+  background: var(--yellow-color);
+}
+
+p {
+  font-family: "BalboaW05", sans-serif;
+  font-weight: 400;
+  color: var(--paste-color);
+}
+.header {
+  background: var(--background);
+  color: var(--paste-color);
+  padding: 20px 0px 10px 0px;
+}
+.header li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.header a {
+  font-size: 24px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .header .logo {
+    font-size: 30px;
+    font-family: "soggy", sans-serif !important;
+    color: var(--yellow-color);
+  }
+  .header a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.header .logo {
+  font-family: "soggy", sans-serif !important;
+  color: var(--yellow-color);
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hexagon-parent {
+  z-index: 10;
+  color: var(--coffe-color);
+  font-family: "soggy", sans-serif !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 70px;
+  aspect-ratio: 1 / 1.1547; /* Adjusted for a hexagon ratio */
+  background: #372a23;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  /* box-shadow: 10px 10px 0px 3px black; */
+}
+
+.shadow {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  background: #39261d;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-children {
+  position: relative;
+  /* z-index: 50; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  background: var(--yellow-color);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.token-gide {
+  font-weight: 500;
+  background: var(--yellow-color);
+  border: 8px solid var(--coffe-color);
+}
+.token-gide p {
+  line-height: 50px;
+  color: var(--coffe-color) !important;
+}
+
+.border-paste {
+  border-color: var(--paste-color);
+}
+/* Basic layout */
+.sidebar-container {
+  display: flex;
+  position: relative;
+}
+
+/* Toggle button */
+.toggle-button {
+  font-size: 1.5rem;
+  padding: 10px;
+  left: 0;
+  color: var(--yellow-color);
+  cursor: pointer;
+  top: 5px;
+}
+
+/* Sidebar (Right side) */
+.sidebar {
+  z-index: 999;
+  /* width: 250px;
+  w */
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--yellow-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 15px;
+  padding-left: 25px;
+  transition: transform 0.7s ease;
+  transform: translateX(100%); /* Hidden by default (off screen on the right) */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--coffe-color);
+  font-size: 20px;
+}
+
+/* Main content */
+.main-content {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 1000px) {
+  .sidebar {
+    transform: translateX(100%) !important;
+  }
+}
+
+#trade img {
+  max-width: 250px !important;
+  max-height: 250px !important;
+  border-radius: 100%;
+}
