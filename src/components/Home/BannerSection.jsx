@@ -8,7 +8,7 @@ export default function BannerSection() {
           <div className="md:col-span-3   hidden lg:flex items-center">
             <HexaGoan customCss={"w-[220px]"}>
               <h1 className="text-4xl text-center font-bold leading-10">
-                <a href="https://dexscreener.com/solana/hrazc2arvekhdgpevmvbqhxkvbgfnllxvyndg1g4t5dd" target="_blank">
+                <a href="https://dexscreener.com/solana/cgq44kxxi4vek668tfonkdb6kuyjmxbhapsjhmwysst3" target="_blank">
                   BUY $BUZZY NOW
                 </a>
               </h1>
@@ -24,7 +24,7 @@ export default function BannerSection() {
             <div className="md:scale-100 scale-50">
               <HexaGoan customCss={"w-[220px]"}>
                 <h1 className="text-4xl text-center font-bold font-soggy leading-10">
-                  <a href="https://dexscreener.com/solana/hrazc2arvekhdgpevmvbqhxkvbgfnllxvyndg1g4t5dd" target="_blank">
+                  <a href="https://dexscreener.com/solana/cgq44kxxi4vek668tfonkdb6kuyjmxbhapsjhmwysst3" target="_blank">
                     BUY $BUZZY NOW
                   </a>
                 </h1>
